@@ -95,8 +95,9 @@ export default function PostsPage() {
             {currentPosts.map((post) => (
               <Card key={post.id} className="p-0">
                 <CardContent className="p-0">
+                  {/* 投稿詳細ページへのリンク、現在のページ情報(リストページ)をクエリパラメーターに追加 */}
                   <Link
-                    href={`/posts/${post.id}`}
+                    href={`/posts/${post.id}?from=posts&page=${currentPage}`}
                     className="block hover:bg-gray-50 hover:text-primary transition-colors p-4"
                   >
                     <h3 className="font-semibold text-lg mb-2">
